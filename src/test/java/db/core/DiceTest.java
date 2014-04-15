@@ -11,7 +11,7 @@ public class DiceTest {
         Dice dice = Dice.create(6);
 
         for (int i = 0; i < 1000; i++) {
-            int result = dice.roll();
+            int result = dice.roll().getResult();
 
             assertTrue(
                     String.format("%d not on 6 side die", result),

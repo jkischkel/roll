@@ -10,8 +10,10 @@ public class DiceControllerTest {
 
     @Test
     public void itShouldRenderTheRollResult() {
+        int result = controller.roll().getResult();
+
         assertTrue(
                 "response not matchting",
-                controller.roll().matches("rolled: \\d"));
+                result >= 1 && result <= 6);
     }
 }
